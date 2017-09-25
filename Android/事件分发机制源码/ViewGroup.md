@@ -1,6 +1,6 @@
 
 
-###ViewGroup
+### ViewGroup
 这一篇是续上篇[Android 事件分发机制源码攻略（一） —— Activity篇](http://blog.csdn.net/u013927241/article/details/76945539) 的ViewGroup，想了解Activity篇的也可以点击查看。
 这篇算是Android事件分发中最为关键的一篇，因为这里会分析哪些事件会被拦截，是以何种形式获取子View，以及对ACTION_DOWN后续事件传递等问题，都会在这里得到答案。好了，废话不多说，现在开始分析。
 上一篇，我们走到的ViewGroup的dispatchTouchEvent（）这个方法。以下该方法的源码（有所省略），以及我个人的注释，篇幅有点长，我这边提供一个粗略的逻辑线路给大家，这个会比较容易理解。
